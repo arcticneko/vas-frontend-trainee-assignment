@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Banner creator</title>
+</head>
+
+<body class="root">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root" class="controls-menu">
+    <label class="controls-menu__control controls-menu__control--txt">
+      Put description text here
+      <input placeholder="Description"
+        class="controls-menu__control-input controls-menu__control-input--text form-control" type="text">
+    </label>
+    <label class="controls-menu__control">
+      Set banner width, px
+      <input placeholder="141" class="controls-menu__control-input form-control controls-menu__control-input--width"
+        id="width" type="text">
+    </label>
+    <label class="controls-menu__control">
+      Set banner height, px
+      <input placeholder="188" class="controls-menu__control-input form-control controls-menu__control-input--height"
+        id="height" type="text">
+    </label>
+    <label class="controls-menu__control controls-menu__control--drop-zone btn-outline-secondary" for="banner-item"
+      tabindex="1">Upload<br>photo
+      <input type="file" id="banner-item" class="visually-hidden" name="banner-item" accept="image/png, image/jpeg">
+    </label>
+    <label class="controls-menu__control controls-menu__control--color">
+      Background color
+      <input type="color" id="color">
+    </label>
+  </div>
+
+  <div class="banner-container" id="banner-container">
+    <div class="banner-container__banner" id="banner" style="background-color: black; height: 188px; width: 141px;
+    border-radius: 8px; position: relative; overflow: hidden;">
+    </div>
+  </div>
+
+  <div class="upload-menu">
+    <button class="upload-menu__button btn-outline-secondary" id="to-png">Show and save as PNG
+      </button>
+    <button class="upload-menu__button btn-outline-secondary" id="to-html"> Copy as html
+      </button>
+    <button class="upload-menu__button btn-outline-secondary" id="to-json"> Copy as json
+      </button>
+  </div>
+
+  <textarea id="copied-results" class="form-control copied-results" placeholder="The results copied to the clipboard will also be displayed here"></textarea>
+
+  <a class="download-png visually-hidden" href="" download>
+    png download link
+  </a>
+
+  <script src="js/banner.min.js" ></script>
+</body>
+
+</html>
